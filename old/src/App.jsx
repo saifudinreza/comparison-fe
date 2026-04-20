@@ -3,8 +3,6 @@ import HomePage from "./pages/HomePage";
 import Mall from "./pages/Mall";
 import Detail from "./pages/Detail";
 import Layout from "./Layout";
-import ProtectedRouter from "./components/ProtectedRoutes";
-import Login from "./pages/Login";
 
 function App() {
   return (
@@ -16,12 +14,7 @@ function App() {
           {" "}
           // layout route
           <Route index element={<HomePage />} /> // route for homepage
-          <Route path="/login" element={<Login />} /> // route for login page
-          <Route element={<ProtectedRouter />}>
-            <Route path="/mall" element={<Mall />} /> // route for mall page
-            <Route path="/detail/:id" element={<Detail />} /> // route for
-            detail page
-          </Route>
+          <Route path="/mall" element={<Mall />} /> // route for mall page
         </Route>
       </Routes>
     </>
