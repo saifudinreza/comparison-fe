@@ -5,6 +5,7 @@ import Detail from "./pages/Detail";
 import Layout from "./Layout";
 import ProtectedRouter from "./components/ProtectedRoutes";
 import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           // layout route
           <Route index element={<HomePage />} /> // route for homepage
           <Route path="/login" element={<Login />} /> // route for login page
+          <Route path="*" element={<NotFound />} /> // route for 404 not found page
           <Route element={<ProtectedRouter />}>
             <Route path="/mall" element={<Mall />} /> // route for mall page
             <Route path="/detail/:id" element={<Detail />} /> // route for
